@@ -28,3 +28,20 @@ var products = [
 		image: "images/blender.jpg"
 	}
 ];
+
+function renderProducts(list) {
+	var grid = document.getElementById("product-grid");
+	grid.innerHTML = "";
+	for (var i = 0; i < list.length; i++) {
+		var p = list[i];
+		var div = document.createElement("div");
+		div.className = "product";
+		div.innerHTML = '<h3>' + p.name + '</h3>' +
+			'<p class="price">$' + p.price + '</p>';
+		grid.appendChild(div);
+	}
+}
+
+window.onload = function() {
+	renderProducts(products);
+};
