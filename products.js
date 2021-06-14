@@ -37,7 +37,7 @@ function renderProducts(list) {
 		var div = document.createElement("div");
 		div.className = "product";
 		div.innerHTML = '<div class="product-img"></div>' +
-			'<h3>' + p.name + '</h3>' +
+			'<h3><a href="product.html?id=' + p.id + '">' + p.name + '</a></h3>' +
 			'<p class="price">$' + p.price + '</p>';
 		grid.appendChild(div);
 	}
