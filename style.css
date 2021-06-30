@@ -73,3 +73,22 @@ button:hover {
 	text-decoration: none;
 	font-size: 16px;
 }
+
+.detail {
+	display: flex;
+	margin-top: 20px;
+}
+
+.detail-img {
+	width: 400px;
+	height: 350px;
+	background-color: #dddddd;
+}
+
+.detail-info {
+	margin-left: 30px;
+}
+
+.detail-info h2 {
+	margin-top: 0;
+}

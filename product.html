@@ -20,5 +20,40 @@
 </div>
 
 <script src="products.js"></script>
+<script>
+function getId() {
+	var url = window.location.search;
+	var parts = url.replace("?", "").split("=");
+	return parseInt(parts[1]);
+}
+
+function showProduct() {
+	var id = getId();
+	var found = null;
+	for (var i = 0; i < products.length; i++) {
+		if (products[i].id == id) {
+			found = products[i];
+		}
+	}
+
+	var detail = document.getElementById("detail");
+	if (found == null) {
+		detail.innerHTML = "<p>Product not found!</p>";
+		return;
+	}
+
+	detail.innerHTML = '<div class="detail-img"></div>' +
+		'<div class="detail-info">' +
+		'<h2>' + found.name + '</h2>' +
+		'<p class="price">$' + found.price + '</p>' +
+		'<p>Category: ' + found.category + '</p>' +
+		'<p>This is a great ' + found.name + '. Limited stock available, order now! Free shipping worldwide.</p>' +
+		'</div>';
+}
+
+window.onload = function() {
+	showProduct();
+};
+</script>
 </body>
 </html>
