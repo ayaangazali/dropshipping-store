@@ -38,7 +38,8 @@ function renderProducts(list) {
 		div.className = "product";
 		div.innerHTML = '<div class="product-img"></div>' +
 			'<h3><a href="product.html?id=' + p.id + '">' + p.name + '</a></h3>' +
-			'<p class="price">$' + p.price + '</p>';
+			'<p class="price">$' + p.price + '</p>' +
+			'<button onclick="addToCart(' + p.id + ')">Add to Cart</button>';
 		grid.appendChild(div);
 	}
 }

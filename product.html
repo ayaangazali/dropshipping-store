@@ -20,6 +20,7 @@
 </div>
 
 <script src="products.js"></script>
+<script src="cart.js"></script>
 <script>
 function getId() {
 	var url = window.location.search;
@@ -48,6 +49,7 @@ function showProduct() {
 		'<p class="price">$' + found.price + '</p>' +
 		'<p>Category: ' + found.category + '</p>' +
 		'<p>This is a great ' + found.name + '. Limited stock available, order now! Free shipping worldwide.</p>' +
+		'<button onclick="addToCart(' + found.id + ')">Add to Cart</button>' +
 		'</div>';
 }
 
