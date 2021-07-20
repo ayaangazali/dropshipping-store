@@ -46,4 +46,5 @@ function renderProducts(list) {
 
 window.onload = function() {
 	renderProducts(products);
+	updateBadge();
 };
