@@ -46,6 +46,25 @@ function clearCart() {
 	updateBadge();
 }
 
+function getProductById(id) {
+	for (var i = 0; i < products.length; i++) {
+		if (products[i].id == id) {
+			return products[i];
+		}
+	}
+	return null;
+}
+
+function cartTotal() {
+	var cart = getCart();
+	var total = 0;
+	for (var i = 0; i < cart.length; i++) {
+		var p = getProductById(cart[i].id);
+		total = total + (p.price * cart[i].qty);
+	}
+	return total;
+}
+
 function updateBadge() {
 	var badge = document.getElementById("cart-count");
 	if (badge == null) {
