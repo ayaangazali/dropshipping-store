@@ -74,6 +74,19 @@ button:hover {
 	font-size: 16px;
 }
 
+.categories {
+	margin-bottom: 15px;
+}
+
+.categories button {
+	background-color: #3498db;
+	margin-right: 5px;
+}
+
+.categories button:hover {
+	background-color: #2980b9;
+}
+
 .detail {
 	display: flex;
 	margin-top: 20px;
