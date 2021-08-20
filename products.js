@@ -44,6 +44,20 @@ function renderProducts(list) {
 	}
 }
 
+function filterCategory(cat) {
+	if (cat == "All") {
+		renderProducts(products);
+		return;
+	}
+	var filtered = [];
+	for (var i = 0; i < products.length; i++) {
+		if (products[i].category == cat) {
+			filtered.push(products[i]);
+		}
+	}
+	renderProducts(filtered);
+}
+
 window.onload = function() {
 	renderProducts(products);
 	updateBadge();
