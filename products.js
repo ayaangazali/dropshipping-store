@@ -26,6 +26,41 @@ var products = [
 		price: 29.99,
 		category: "Home",
 		image: "images/blender.jpg"
+	},
+	{
+		id: 5,
+		name: "Phone Tripod",
+		price: 15.99,
+		category: "Gadgets",
+		image: "images/tripod.jpg"
+	},
+	{
+		id: 6,
+		name: "Resistance Bands",
+		price: 12.99,
+		category: "Fitness",
+		image: "images/bands.jpg"
+	},
+	{
+		id: 7,
+		name: "Car Vacuum",
+		price: 34.99,
+		category: "Home",
+		image: "images/vacuum.jpg"
+	},
+	{
+		id: 8,
+		name: "Wireless Earbuds",
+		price: 39.99,
+		category: "Gadgets",
+		image: "images/earbuds.jpg"
+	},
+	{
+		id: 9,
+		name: "Yoga Mat",
+		price: 22.99,
+		category: "Fitness",
+		image: "images/yogamat.jpg"
 	}
 ];
 
