@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout - TrendyGadget Store</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+	<h1><a href="index.html" style="color:white;text-decoration:none;">TrendyGadget Store</a></h1>
+	<p style="color:white;">Best gadgets shipped to your door!</p>
+	<a href="checkout.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+</div>
+
+<div class="container">
+	<a href="index.html">&laquo; Continue shopping</a>
+
+	<h2>Your Cart</h2>
+	<div id="cart-list"></div>
+	<h3 id="cart-total"></h3>
+</div>
+
+<div class="footer">
+	<p>Copyright 2021 TrendyGadget Store</p>
+</div>
+
+<script src="products.js"></script>
+<script src="cart.js"></script>
+<script>
+window.onload = function() {
+	renderCart();
+	updateBadge();
+};
+</script>
+</body>
+</html>

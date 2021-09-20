@@ -77,3 +77,29 @@ function updateBadge() {
 	}
 	badge.innerHTML = count;
 }
+
+function renderCart() {
+	var cart = getCart();
+	var list = document.getElementById("cart-list");
+	if (list == null) {
+		return;
+	}
+	list.innerHTML = "";
+	if (cart.length == 0) {
+		list.innerHTML = "<p>Your cart is empty.</p>";
+		return;
+	}
+	for (var i = 0; i < cart.length; i++) {
+		var p = getProductById(cart[i].id);
+		var row = document.createElement("div");
+		row.className = "cart-row";
+		row.innerHTML = '<span>' + p.name + ' x ' + cart[i].qty + '</span>' +
+			'<span>$' + (p.price * cart[i].qty).toFixed(2) + '</span>' +
+			'<button onclick="removeFromCart(' + p.id + ');renderCart();">Remove</button>';
+		list.appendChild(row);
+	}
+	var totalDiv = document.getElementById("cart-total");
+	if (totalDiv != null) {
+		totalDiv.innerHTML = "Total: $" + cartTotal().toFixed(2);
+	}
+}
