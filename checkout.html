@@ -52,6 +52,17 @@
 <script src="products.js"></script>
 <script src="cart.js"></script>
 <script>
+function placeOrder() {
+	var cart = getCart();
+	if (cart.length == 0) {
+		alert("Your cart is empty!");
+		return;
+	}
+	alert("Order placed!");
+	clearCart();
+	renderCart();
+}
+
 window.onload = function() {
 	renderCart();
 	updateBadge();
