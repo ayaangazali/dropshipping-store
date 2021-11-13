@@ -73,7 +73,12 @@ function updateBadge() {
 	var cart = getCart();
 	var count = 0;
 	for (var i = 0; i < cart.length; i++) {
-		count = count + cart[i].qty;
+		// sometimes qty was undefined and badge showed NaN, fixed
+		var q = cart[i].qty;
+		if (q == undefined) {
+			q = 1;
+		}
+		count = count + q;
 	}
 	badge.innerHTML = count;
 }
